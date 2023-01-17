@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Montserrat:wght@200;300;400;700&family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+}
+  
+  body::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(248, 178, 48);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;    
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    z-index: 2;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+}
+
+.logo h1 {
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.menu-link li,a {
+    display: inline-block;
+    color: black;
+    margin: 0 .5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.menu-link li,a:hover {
+    color: orangered;
+}
+
+section {
+    padding: 4rem 10rem;
+    height: 100vh;
+    width: 100%;
+}
+
+.home {
+    background: linear-gradient(to bottom, white 80%, rgb(226, 226, 226));
+}
+
+.home .text {
+    padding: 6rem 0;
+}
+
+.home h1, h3, p {
+    padding: .5rem 0;
+}
+
+.text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.title-main {
+    color: orange;
+    font-size: 3em;
+}
+
+.subtitle-main {
+    font-size: 1.5em;
+}
+
+.text-main {
+    text-align: justify;
+}
+
+.left img {
+    height: 300px;
+    animation: food 3s infinite ease-in-out;
+}
+
+.right {
+    margin-left: 3rem;
+}
+
+.right h1, h3, p{
+    text-align: center;
+}
+
+.home .arrow {
+    position: relative;
+    bottom: 7rem;
+    text-align: center;
+    animation: arrow 3s infinite ease-in-out;
+}
+
+.home .arrow img {
+    height: 30px;
+
+}
+
+@keyframes arrow {
+    0%, 100% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(20%);
+    }
+}
+
+@keyframes food {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.btn-vermais {
+    float: right;
+    margin: 1rem 0;
+    display: flex;
+    padding: 10px 20px;
+    border: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+    border: 1px solid orange;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.425);
+}
+
+.btn-vermais:hover{
+    background: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.425);
+}
+
+.info {
+    background: linear-gradient( 65deg, rgb(245, 158, 60), rgb(243, 134, 33) 80%);
+    display: flex;
+    align-items: center;
+}
+
+.info .right img {
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgb(26, 26, 26);
+    height: 350px;
+}
+
+.subtitle-main, .text-main {
+    padding: 1rem 0;
+}
+
+.info .left .title-main {
+    font-size: 1em;
+    color: rgb(245, 200, 118);
+}
+
+.info .left .subtitle-main {
+    color: rgb(248, 248, 248);
+    font-size: 2em;
+}
+
+.info .left .text-main {
+    color: rgb(241, 241, 241);
+    text-align: left;
+}
+ 
+.info .left .btn-vermais {
+    float: none;
+}
+
+.offers {
+    background: linear-gradient(to bottom, white 80%, rgba(226, 226, 226, 0.404) );
+}
+
+.offers .text  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.offers .text .title-main {
+    font-size: 1.5em;
+}
+
+.container-services {
+    display: flex;
+    height: 70vh;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.container-services .icon i {
+    color: orange;
+    font-size: 3em;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.container-services .icon h1,p {
+    padding: .5rem 0;
+}
+
+.container-services .icon p {
+    color: rgb(66, 66, 66);
+    font-size: .9em;
+}
+
+.menu-food .text > .title-main {
+    font-size: 1em;
+}
+
+.menu-food .text {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+.menu-food .container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.menu-food .container-menu .menu {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 350px;
+    width: 300px;
+    background: rgb(59, 59, 59);
+    border: 3px solid orange;
+    border-radius: 10px;
+    /* box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288); */
+}
+
+.menu-food .container-menu .menu img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+.menu-food .container-menu .menu > h1,p {
+    padding: 1rem 0;
+}
+
+.menu-food .container-menu .menu > h1 {
+    color: rgb(241, 149, 63);
+}
+
+.menu-food .container-menu .menu > p {
+    color: white;
+}
+
+.text, .left, .right, .container-menu, .container-services {
+    visibility: hidden;
+}
+
+.menu-mob {
+    pointer-events: none;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 2px;
+    width: 30px;
+    border-radius: 20px;
+    background: black;
+    margin: 5px 0;
+}
+
+@media screen and (max-width:884px){
+
+    * {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    
+    body {
+
+    }
+
+    header {
+        padding: 2rem 2rem;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home .text {
+        justify-content: center;
+    }
+
+    .home .left img {
+        display: none;
+    }
+
+    .menu-link {
+        pointer-events: none;
+        display: none;
+    }
+    
+    .info {
+        background: url(assets/churrasco3-bg.jpg);
+        background-size: cover;
+        background-position: right;
+        height: 100vh;
+    }
+    
+    .info .right img {
+        display: none;
+    }
+    
+    .info .left .btn-vermais {
+        display: none;
+    }
+    
+    .offers {
+        height: 160vh;
+    }
+    
+    .offers .container-services .icon {
+        padding: 3rem 0;
+    }
+    
+    .menu-food .container-menu .menu {
+        width: 150%;
+    }
+
+    .menu-food .container-menu .menu h1 {
+        display: none;
+    }
+
+    .menu-food .container-menu .menu p {
+        margin-top: 1rem;
+    }
+
+    .menu-mob {
+        pointer-events: all;
+        display: inline;
+    }
+
+    section {
+        padding: 4rem 3rem ;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
