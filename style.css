@@ -9,16 +9,16 @@
 }
 
 body::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
+    width: 5px;           
 }
   
-  body::-webkit-scrollbar-track {
-    background: white;        /* color of the tracking area */
+body::-webkit-scrollbar-track {
+    background: white;    
 }
   
-  body::-webkit-scrollbar-thumb {
-    background-color: rgb(248, 178, 48);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(248, 178, 48);
+    border-radius: 20px;   
 }
 
 html {
@@ -27,7 +27,7 @@ html {
 
 body {
     overflow-x: hidden;    
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -40,6 +40,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 10rem;
+    backdrop-filter: blur(3px);
+    background: #ffffff70;
 }
 
 .logo h1 {
@@ -61,8 +63,8 @@ header {
 }
 
 section {
-    padding: 4rem 10rem;
-    height: 100vh;
+    padding: 1rem 10rem;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -80,7 +82,7 @@ section {
 
 .text {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -111,15 +113,12 @@ section {
 }
 
 .home .arrow {
-    position: relative;
-    bottom: 7rem;
     text-align: center;
     animation: arrow 3s infinite ease-in-out;
 }
 
 .home .arrow img {
     height: 30px;
-
 }
 
 @keyframes arrow {
@@ -206,7 +205,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin: 5rem 0;
 }
 
 .offers .text .title-main {
@@ -215,7 +214,6 @@ section {
 
 .container-services {
     display: flex;
-    height: 70vh;
     align-items: center;
     text-align: center;
     gap: 1rem;
@@ -238,6 +236,10 @@ section {
     font-size: .9em;
 }
 
+.menu-food {
+    min-height: 100vh;
+}
+
 .menu-food .text > .title-main {
     font-size: 1em;
 }
@@ -247,7 +249,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 6rem;
 }
 
 .menu-food .container-menu {
@@ -261,14 +262,12 @@ section {
     padding: 20px 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     flex-direction: column;
     height: 350px;
     width: 300px;
     background: rgb(59, 59, 59);
     border: 3px solid orange;
     border-radius: 10px;
-    /* box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288); */
 }
 
 .menu-food .container-menu .menu img {
@@ -314,24 +313,49 @@ section {
         padding: 0;
     }
     
-    body {
-
+    section {
+        max-height: 100% !important;
     }
 
     header {
-        padding: 2rem 2rem;
+        padding: 0rem 2rem;
+    }
+
+    .logo h1 {
+        font-size: 1.2em;
     }
 
     .home {
-        text-align: center;
+        padding: 4rem 1rem;
     }
 
     .home .text {
+        padding: 0;
+        display: flex;
+        align-items: center;
         justify-content: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .home .right {
+        font-size: .9em;
+    }
+
+    .right .text-main {
+        margin: 0;
+    }
+
+    .home .right {
+        margin: 0;
     }
 
     .home .left img {
         display: none;
+    }
+
+    .right .btn-vermais {
+        float: none;
     }
 
     .menu-link {
@@ -357,13 +381,9 @@ section {
     .offers {
         height: 160vh;
     }
-    
-    .offers .container-services .icon {
-        padding: 3rem 0;
-    }
-    
-    .menu-food .container-menu .menu {
-        width: 150%;
+
+    .menu-food {
+        padding-top: 15rem;
     }
 
     .menu-food .container-menu .menu h1 {
